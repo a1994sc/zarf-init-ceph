@@ -1,0 +1,27 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "assignees": [
+    "@A1994SC"
+  ],
+  "dependencyDashboard": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": [
+        "Process custom dependencies"
+      ],
+      "fileMatch": [
+        "(^|/).+\\.ya?ml(\\.j2)?$"
+      ],
+      "matchStrings": [
+        "(?m:# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( repository=(?<registryUrl>\\S+))?\\n.+?: ?\"?.*(?<currentValue>\\S+?)\"?$)",
+        "(?m:# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.+?\/(?<currentValue>(v|\\d)[^\/]+)\\S+$)"
+      ],
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}"
+    }
+  ]
+}

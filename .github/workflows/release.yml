@@ -1,0 +1,47 @@
+name: Release Zarf Package
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - id: describe
+        run: echo "git_describe=$(git describe --first-parent --tags --long)" >> "$GITHUB_OUTPUT"
+
+      - name: Install The Latest Release Version of Zarf
+        uses: defenseunicorns/setup-zarf@10e539efed02f75ec39eb8823e22a5c795f492ae # v1.0.1
+
+      - name: Install Cosign
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: sigstore/cosign-installer@d7d6bc7722e3daa8354c50bcb52f4837da5e9b6a # v3.8.1
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set package version
+        run: |-
+          sed -E 's/(^ +version: )v0.0.0$/\1${{ steps.describe.outputs.git_describe }}/1' zarf.yaml
+
+      - name: Package Zarf package
+        run: |
+          zarf package create --confirm . --architecture amd64 --flavor amd64 --output oci://ghcr.io/${{ github.repository_owner }}/zarf

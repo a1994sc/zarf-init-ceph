@@ -1,0 +1,13 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+    reviewers:
+      - a1994sc
+    assignees:
+      - a1994sc
+    commit-message:
+      prefix: "chore(actions): "
