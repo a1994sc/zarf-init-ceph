@@ -40,8 +40,11 @@ jobs:
 
       - name: Set package version
         run: |-
-          sed -E 's/(^ +version: )v0.0.0$/\1${{ steps.describe.outputs.git_describe }}/1' zarf.yaml
+          sed -i -E 's/(^ +version: )v0.0.0$/\1${{ steps.describe.outputs.git_describe }}/1' zarf.yaml
 
       - name: Package Zarf package
         run: |
           zarf package create --confirm . --architecture amd64 --flavor amd64 --output oci://ghcr.io/${{ github.repository_owner }}/zarf
+
+      - name: Sign artifacts with Cosign
+        run: cosign sign --yes ghcr.io/${{ github.repository_owner }}/zarf/bootstrap-rook-ceph:${{ matrix.charts.version }}-amd64
