@@ -48,4 +48,4 @@ jobs:
           zarf package create --confirm . --architecture amd64 --flavor amd64 --output oci://ghcr.io/${{ github.repository_owner }}
 
       - name: Sign artifacts with Cosign
-        run: cosign sign --yes ghcr.io/${{ github.repository_owner }}/${{ github.repository_owner }}:${{ steps.describe.outputs.git_describe }}-amd64
+        run: cosign sign --yes ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ steps.describe.outputs.git_describe }}-amd64
