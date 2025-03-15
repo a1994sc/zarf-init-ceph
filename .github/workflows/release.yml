@@ -44,8 +44,9 @@ jobs:
           sed -i -E 's/(^ +version: )v0.0.0$/\1${{ steps.describe.outputs.git_describe }}/1' zarf.yaml
 
       - name: Package Zarf package
-        run: |
+        run: |-
           zarf package create --confirm . --architecture amd64 --flavor amd64 --output oci://ghcr.io/${{ github.repository_owner }}
 
       - name: Sign artifacts with Cosign
-        run: cosign sign --yes ghcr.io/${{ github.repository }}:${{ steps.describe.outputs.git_describe }}-amd64
+        run: |-
+          cosign sign --yes ghcr.io/${{ github.repository }}:${{ steps.describe.outputs.git_describe }}-amd64
