@@ -5,17 +5,17 @@
     # keep-sorted start block=yes case=no
     flake-utils = {
       inputs.systems.follows = "systems";
-      url = "git+https://github.com/numtide/flake-utils";
+      url = "github:numtide/flake-utils";
     };
-    nixpkgs.url = "git+https://github.com/nixos/nixpkgs?ref=refs/heads/nixos-unstable-small";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     pre-commit-hooks = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "git+https://github.com/cachix/pre-commit-hooks.nix";
+      url = "github:cachix/pre-commit-hooks.nix";
     };
-    systems.url = "git+https://github.com/nix-systems/default";
+    systems.url = "github:nix-systems/default";
     treefmt-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "git+https://github.com/numtide/treefmt-nix";
+      url = "github:numtide/treefmt-nix";
     };
     ascii-pkgs.url = "github:a1994sc/nix-pkgs";
     # keep-sorted end
@@ -81,7 +81,6 @@
           + ''
             export ZARF_CONFIG=$(git rev-parse --show-toplevel)/zarf-config.yaml
           '';
-        zarfRegistryOverride = repo: override: "--registry-override ${repo}=${override}";
         buildInputs = self.checks.${system}.pre-commit-check.enabledPackages ++ [
           (pkgs.writeShellScriptBin "zpkg" ''
             rm -rf $TMPDIR/zarf-*
