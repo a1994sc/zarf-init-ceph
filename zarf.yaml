@@ -2,9 +2,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/zarf-dev/zarf/v0.49.1/zarf.schema.json
 kind: ZarfPackageConfig
 metadata:
-  name: bootstrap-rook-ceph
+  name: zarf-init-ceph
   version: v0.0.0
-  source: https://github.com/a1994sc/zarf-package-bootstrap-rook-ceph
+  source: https://github.com/a1994sc/zarf-init-ceph
 components:
   # Pulls in the zarf-injector
   - name: zarf-injector

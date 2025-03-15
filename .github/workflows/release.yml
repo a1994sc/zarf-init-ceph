@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+    paths-ignore:
+      - '.github/**'
 
 jobs:
   release:
@@ -41,7 +45,7 @@ jobs:
 
       - name: Package Zarf package
         run: |
-          zarf package create --confirm . --architecture amd64 --flavor amd64 --output oci://ghcr.io/${{ github.repository_owner }}/zarf
+          zarf package create --confirm . --architecture amd64 --flavor amd64 --output oci://ghcr.io/${{ github.repository_owner }}
 
       - name: Sign artifacts with Cosign
-        run: cosign sign --yes ghcr.io/${{ github.repository_owner }}/zarf/bootstrap-rook-ceph:${{ steps.describe.outputs.git_describe }}-amd64
+        run: cosign sign --yes ghcr.io/${{ github.repository_owner }}/${{ github.repository_owner }}:${{ steps.describe.outputs.git_describe }}-amd64
