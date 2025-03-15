@@ -5,6 +5,8 @@ metadata:
   name: zarf-init-ceph
   version: v0.0.0
   source: https://github.com/a1994sc/zarf-init-ceph
+  annotations:
+    org.opencontainers.image.source: "https://github.com/a1994sc/zarf-init-ceph"
 components:
   # Pulls in the zarf-injector
   - name: zarf-injector
