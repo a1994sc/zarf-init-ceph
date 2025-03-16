@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         types:
-          - skeleton
+          # - skeleton
           - amd64
           - arm64
     outputs:
