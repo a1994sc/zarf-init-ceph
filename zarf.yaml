@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/zarf-dev/zarf/v0.49.1/zarf.schema.json
-kind: ZarfPackageConfig
+kind: ZarfInitConfig
 metadata:
   name: zarf-init-ceph
   version: v0.0.0
@@ -21,12 +21,17 @@ components:
       # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
       url: oci://ghcr.io/zarf-dev/packages/init:v0.49.1
 
-  # # Creates the temporary seed-registry
-  # - name: zarf-seed-registry
-  #   required: true
-  #   import:
-  #     # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
-  #     url: oci://ghcr.io/zarf-dev/packages/init:v0.49.1
+  - name: operator-seed
+    required: true
+    import:
+      # renovate: datasource=docker depName=ghcr.io/a1994sc/zarf-package-rook-ceph
+      url: oci://ghcr.io/a1994sc/zarf-package-rook-ceph:v1.16.5
+
+  - name: cluster-seed
+    required: true
+    import:
+      # renovate: datasource=docker depName=ghcr.io/a1994sc/zarf-package-rook-ceph
+      url: oci://ghcr.io/a1994sc/zarf-package-rook-ceph:v1.16.5
 
   # # Creates the permanent registry
   # - name: zarf-registry
