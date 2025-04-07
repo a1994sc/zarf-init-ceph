@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://raw.githubusercontent.com/zarf-dev/zarf/v0.51.0/zarf.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/zarf-dev/zarf/main/zarf.schema.json
 kind: ZarfInitConfig
 metadata:
   name: zarf-init-ceph
@@ -18,26 +18,26 @@ components:
   - name: zarf-seed-registry
     required: true
     import:
-      # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
+      # renovate: datasource=docker
       url: oci://ghcr.io/zarf-dev/packages/init:v0.51.0
 
   - name: operator-seed
     required: true
     import:
-      # renovate: datasource=docker depName=ghcr.io/a1994sc/zarf-package-rook-ceph
+      # renovate: datasource=docker
       url: oci://ghcr.io/a1994sc/zarf-package-rook-ceph:v1.16.6
 
   - name: cluster-seed
     required: true
     import:
-      # renovate: datasource=docker depName=ghcr.io/a1994sc/zarf-package-rook-ceph
+      # renovate: datasource=docker
       url: oci://ghcr.io/a1994sc/zarf-package-rook-ceph:v1.16.6
 
   # # Creates the permanent registry
   # - name: zarf-registry
   #   required: true
   #   import:
-  #     # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
+  #     # renovate: datasource=docker
   #     url: oci://ghcr.io/zarf-dev/packages/init:v0.51.0
 
   # Creates the pod+git mutating webhook

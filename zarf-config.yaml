@@ -11,10 +11,13 @@ package:
 
       registry_image_domain: 'ghcr.io/'
       registry_image: 'distribution/distribution'
-      registry_image_tag: '3.0.0'
+      # renovate: datasource=docker depName=ghcr.io/distribution/distribution
+      registry_image_tag: 3.0.0
 
       agent_image_domain: 'ghcr.io/'
       agent_image: 'zarf-dev/zarf/agent'
-      agent_image_tag: 'v0.51.0'
+      # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
+      agent_image_tag: v0.51.0
 
-      gitea_image: 'docker.io/gitea/gitea:1.23.6-rootless'
+      # renovate: datasource=docker depName=docker.io/gitea/gitea
+      gitea_image: docker.io/gitea/gitea:1.23.6-rootless
