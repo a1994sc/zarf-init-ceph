@@ -18,7 +18,8 @@ jobs:
       fail-fast: false
       matrix:
         types:
-          - skeleton
+          # we can't do `skeleton` as how the `zarf-injector` component
+          # - skeleton
           - amd64
           - arm64
     outputs:
