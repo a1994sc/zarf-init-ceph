@@ -12,8 +12,7 @@ components:
   - name: zarf-injector
     required: true
     import:
-      # renovate: datasource=docker
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.51.0
+      path: ./injector
 
   # This package moves the injector & registries binaries
   - name: zarf-seed-registry
