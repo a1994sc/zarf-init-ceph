@@ -33,15 +33,22 @@ components:
       # renovate: datasource=docker
       url: oci://ghcr.io/a1994sc/zarf-package-rook-ceph:v1.16.6
 
-  # # Creates the permanent registry
-  # - name: zarf-registry
-  #   required: true
-  #   import:
-  #     # renovate: datasource=docker
-  #     url: oci://ghcr.io/zarf-dev/packages/init:v0.51.0
+  # Creates the permanent registry
+  - name: zarf-registry
+    required: true
+    import:
+      # renovate: datasource=docker
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.51.0
 
   # Creates the pod+git mutating webhook
   - name: zarf-agent
+    required: true
+    import:
+      # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.51.0
+
+  # Adds a git server to the cluster
+  - name: git-server
     required: true
     import:
       # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
