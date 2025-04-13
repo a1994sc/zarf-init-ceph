@@ -11,3 +11,4 @@ decompress
 /result*
 .direnv
 .pre-commit-config.yaml
+/zarf-init-ceph

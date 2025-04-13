@@ -11,6 +11,18 @@ components:
   # Pulls in the zarf-injector
   - name: zarf-injector
     required: true
+    only:
+      cluster:
+        architecture: amd64
+    import:
+      # renovate: datasource=docker
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.51.0
+
+  - name: zarf-injector
+    required: true
+    only:
+      cluster:
+        architecture: arm64
     import:
       path: ./injector
 
