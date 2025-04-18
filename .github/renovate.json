@@ -7,6 +7,20 @@
   "assignees": [
     "@A1994SC"
   ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "addLabels": [
+        "renovate/oci"
+      ],
+      "groupName": "Zarf packages",
+      "matchPackageNames": [
+        "ghcr.io/zarf-dev/*"
+      ]
+    }
+  ],
   "dependencyDashboard": true,
   "customManagers": [
     {
