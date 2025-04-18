@@ -104,7 +104,6 @@
               # keep-sorted start case=no
               check-executables-have-shebangs.enable = true;
               check-shebang-scripts-are-executable.enable = true;
-              commitizen.enable = true;
               end-of-file-fixer.enable = true;
               nixfmt-rfc-style.enable = true;
               # no-commit-to-branch.enable = true;
