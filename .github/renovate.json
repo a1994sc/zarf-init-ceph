@@ -17,7 +17,8 @@
       ],
       "groupName": "Zarf packages",
       "matchPackageNames": [
-        "ghcr.io/zarf-dev/*"
+        "ghcr.io/zarf-dev/packages/init",
+        "ghcr.io/zarf-dev/zarf/agent"
       ]
     }
   ],
