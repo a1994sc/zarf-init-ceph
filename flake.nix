@@ -94,6 +94,7 @@
           '')
           pkgs.gh
           zarf
+          pkgs.curl
         ];
       in
       {
