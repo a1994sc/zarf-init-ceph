@@ -20,4 +20,4 @@ package:
       agent_image_tag: v0.53.0
 
       # renovate: datasource=docker depName=docker.io/gitea/gitea
-      gitea_image: ghcr.io/go-gitea/gitea:1.23-nightly-rootless
+      gitea_image: ghcr.io/go-gitea/gitea:1.24-nightly-rootless
