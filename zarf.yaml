@@ -3,7 +3,7 @@
 kind: ZarfInitConfig
 metadata:
   name: zarf-init-ceph
-  version: v0.0.0
+  version: "###ZARF_PKG_TMPL_VERSION###"
   source: https://github.com/a1994sc/zarf-init-ceph
   annotations:
     org.opencontainers.image.source: "https://github.com/a1994sc/zarf-init-ceph"

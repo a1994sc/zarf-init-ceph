@@ -4,6 +4,8 @@ package:
   oci_concurrency: 15
   create:
     set:
+      version: v0.0.0
+
       # required when import the `zarf-init` package
       injector_version: "2025-03-24"
       injector_amd64_shasum: a78d66b9e2b00a22edd9b4e6432a4d934621e3757f09493b12f688c7c9baca93

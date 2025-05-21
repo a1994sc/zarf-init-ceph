@@ -86,11 +86,7 @@
             rm -rf $TMPDIR/zarf-*
             rm -rf $TMPDIR/syft-archive-contents-*
             rm -rf $TMPDIR/container_images_storage*
-            ${zarf}/bin/zarf package create -o $(git rev-parse --show-toplevel) --log-format=console --confirm $@
-          '')
-          (pkgs.writeShellScriptBin "zdeploy" ''
-            rm -rf $TMPDIR/zarf-*
-            ${zarf}/bin/zarf package deploy --confirm --log-format=console $@
+            ${zarf}/bin/zarf package create -o $(${pkgs.git}/bin/git rev-parse --show-toplevel) --set=version=$(${pkgs.git}/bin/git describe --first-parent --always | ${pkgs.gnused}/bin/sed -r 's/-[a-z0-9]*$//1; s/-([0-9]+)/-rc.\1/1; s/(v[0-9]+\.[0-9]+\.)([0-9]+)(-rc.[0-9]+)/echo "\1$((\2+1))\3"/ge') --log-format=console --confirm $@
           '')
           pkgs.gh
           zarf

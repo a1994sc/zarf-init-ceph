@@ -48,7 +48,7 @@ jobs:
 
       - name: Set package version
         run: |-
-          sed -i -E 's/(^ +version: )v0.0.0$/\1${{ steps.describe.outputs.git_describe }}/1' zarf.yaml
+          sed -i -E 's/(^ +version: ).+$/\1${{ steps.describe.outputs.git_describe }}/1' zarf.yaml
 
       - name: Package Zarf package
         if: ${{ matrix.types != 'skeleton' }}
