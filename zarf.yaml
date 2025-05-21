@@ -56,12 +56,12 @@ components:
   - name: zarf-agent
     required: true
     import:
-      # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.3
+      # renovate: datasource=docker
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.2
 
   # Adds a git server to the cluster
   - name: git-server
     required: true
     import:
-      # renovate: datasource=docker depName=ghcr.io/zarf-dev/zarf/agent
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.3
+      # renovate: datasource=docker
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.2
