@@ -10,15 +10,6 @@
   "packageRules": [
     {
       "matchDatasources": [
-        "github-actions"
-      ],
-      "matchPackageNames": [
-        "*"
-      ],
-      "automerge": true
-    },
-    {
-      "matchDatasources": [
         "docker"
       ],
       "addLabels": [
@@ -31,6 +22,9 @@
       ]
     }
   ],
+  "github-actions": {
+    "enabled": false
+  },
   "dependencyDashboard": true,
   "customManagers": [
     {
