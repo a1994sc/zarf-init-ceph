@@ -37,13 +37,13 @@ components:
     required: true
     import:
       # renovate: datasource=docker
-      url: oci://ghcr.io/a1994sc/zarf/rook-ceph:v1.17.3
+      url: oci://ghcr.io/a1994sc/zarf/rook-ceph:v1.17.4
 
   - name: cluster-seed
     required: true
     import:
       # renovate: datasource=docker
-      url: oci://ghcr.io/a1994sc/zarf/rook-ceph:v1.17.3
+      url: oci://ghcr.io/a1994sc/zarf/rook-ceph:v1.17.4
 
   # Creates the permanent registry
   - name: zarf-registry
