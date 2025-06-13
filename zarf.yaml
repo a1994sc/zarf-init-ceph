@@ -16,7 +16,7 @@ components:
         architecture: amd64
     import:
       # renovate: datasource=docker
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.6
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.56.0
 
   - name: zarf-injector
     required: true
@@ -31,7 +31,7 @@ components:
     required: true
     import:
       # renovate: datasource=docker
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.6
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.56.0
 
   - name: operator-seed
     required: true
@@ -50,18 +50,18 @@ components:
     required: true
     import:
       # renovate: datasource=docker
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.6
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.56.0
 
   # Creates the pod+git mutating webhook
   - name: zarf-agent
     required: true
     import:
       # renovate: datasource=docker
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.6
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.56.0
 
   # Adds a git server to the cluster
   - name: git-server
     required: true
     import:
       # renovate: datasource=docker
-      url: oci://ghcr.io/zarf-dev/packages/init:v0.55.6
+      url: oci://ghcr.io/zarf-dev/packages/init:v0.56.0
