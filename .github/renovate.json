@@ -20,6 +20,18 @@
         "ghcr.io/zarf-dev/packages/init",
         "ghcr.io/zarf-dev/zarf/agent"
       ]
+    },
+    {
+      "matchDatasources": [
+        "regex"
+      ],
+      "addLabels": [
+        "renovate/bigbang"
+      ],
+      "groupName": "big-bang",
+      "matchPackageNames": [
+        ".+"
+      ]
     }
   ],
   "github-actions": {
