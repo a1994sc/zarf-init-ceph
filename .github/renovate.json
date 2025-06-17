@@ -20,6 +20,18 @@
         "ghcr.io/zarf-dev/packages/init",
         "ghcr.io/zarf-dev/zarf/agent"
       ]
+    },
+    {
+      "matchDatasources": [
+        "regex"
+      ],
+      "addLabels": [
+        "renovate/oci"
+      ],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+-bb.+)$",
+      "matchPackageNames": [
+        "/^registry1.dso.mil.+/"
+      ]
     }
   ],
   "github-actions": {
