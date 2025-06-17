@@ -8,7 +8,7 @@ metadata:
   annotations:
     org.opencontainers.image.source: "https://github.com/a1994sc/zarf-init-ceph"
 x-test:
-  # renovate: packagename=istioCRDs
+  # renovate: packageName=istioCRDs
   - registry1.dso.mil/bigbang/istio-crds:1.25.1-bb.0
 components:
   # Pulls in the zarf-injector
