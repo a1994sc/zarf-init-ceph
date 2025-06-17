@@ -43,13 +43,12 @@
     },
     {
       "customType": "regex",
-      "depNameTemplate": "bigbang",
       "datasourceTemplate": "custom.bigbang",
       "managerFilePatterns": [
         "/(^|/).+\\.ya?ml(\\.j2)?$/"
       ],
       "matchStrings": [
-        "(?m:# renovate: packagename=(?<packageName>\\S+)\n.+?(?<currentValue>(?:[0-9]+\\.?){3}-bb\\.[0-9]+$))"
+        "(?m:# renovate: packagename=(?<packageName>\\S+)\n.+(?<depName>registry1.dso.mil\\/bigbang\\/.+):?(?<currentValue>(?:[0-9]+\\.?){3}-bb\\.[0-9]+$))"
       ]
     }
   ],

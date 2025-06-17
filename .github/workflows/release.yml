@@ -19,8 +19,8 @@ jobs:
       matrix:
         types:
           - skeleton
-          - amd64
-          - arm64
+          # - amd64
+          # - arm64
     outputs:
       git-tag: ${{ steps.describe.outputs.git_describe }}
     steps:
