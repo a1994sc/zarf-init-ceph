@@ -30,7 +30,7 @@
       ],
       "groupName": "big-bang",
       "matchPackageNames": [
-        "/.+/"
+        "/^registry1.dso.mil/"
       ]
     }
   ],
