@@ -29,7 +29,7 @@
         "renovate/bigbang"
       ],
       "groupName": "big-bang",
-      "matchPackageNames": [
+      "matchDepNames": [
         "/^registry1.dso.mil/"
       ]
     }
