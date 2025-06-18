@@ -20,8 +20,26 @@
         "ghcr.io/zarf-dev/packages/init",
         "ghcr.io/zarf-dev/zarf/agent"
       ]
+    },
+    {
+      "matchDatasources": [
+        "custom.bigbang"
+      ],
+      "addLabels": [
+        "renovate/bigbang"
+      ],
+      "groupName": "big-bang",
+      "matchDepNames": [
+        "/^registry1.dso.mil/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ]
     }
   ],
+  "separateMajorMinor": false,
   "github-actions": {
     "enabled": false
   },
@@ -40,6 +58,26 @@
         "(?m:# renovate: datasource=(?<datasource>\\S+)\n.+: (?:oci:/{2})?(?<depName>[a-z0-9\\.].+):(?<currentValue>v?([0-9]+\\.?){3}(-.+)?$))"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}"
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "custom.bigbang",
+      "managerFilePatterns": [
+        "/(^|/).+\\.ya?ml(\\.j2)?$/"
+      ],
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+-bb.+)$",
+      "matchStrings": [
+        "(?m:# renovate: packageName=(?<packageName>\\S+)\n.+(?<depName>registry1.dso.mil\\/bigbang\\/.+):(?<currentValue>(?:[0-9]+\\.?){3}-bb.+$)\n)"
+      ]
     }
-  ]
+  ],
+  "customDatasources": {
+    "bigbang": {
+      "defaultRegistryUrlTemplate": "https://repo1.dso.mil/big-bang/bigbang/-/raw/3.0.0/chart/values.yaml",
+      "format": "yaml",
+      "transformTemplates": [
+        "($pkg := {{packageName}}; $url := $replace($pkg.git.repo, /.git/, ''); $vrs := $pkg.helmRepo.tag; {\"releases\": [{\"version\": $vrs, \"sourceUrl\": $url}]})"
+      ]
+    }
+  }
 }

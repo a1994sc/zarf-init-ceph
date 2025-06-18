@@ -7,6 +7,83 @@ metadata:
   source: https://github.com/a1994sc/zarf-init-ceph
   annotations:
     org.opencontainers.image.source: "https://github.com/a1994sc/zarf-init-ceph"
+x-test:
+  # renovate: packageName=alloy
+  - registry1.dso.mil/bigbang/k8s-monitoring:0.0.0-bb.0
+  # renovate: packageName=addons.anchoreEnterprise
+  - registry1.dso.mil/bigbang/anchore:0.0.0-bb.0
+  # renovate: packageName=addons.argocd
+  - registry1.dso.mil/bigbang/argocd:0.0.0-bb.0
+  # renovate: packageName=addons.authservice
+  - registry1.dso.mil/bigbang/authservice:0.0.0-bb.0
+  # renovate: packageName=bbctl
+  - registry1.dso.mil/bigbang/bbctl:0.0.0-bb.0
+  # renovate: packageName=eckOperator
+  - registry1.dso.mil/bigbang/eck-operator:0.0.0-bb.0
+  # renovate: packageName=elasticsearchKibana
+  - registry1.dso.mil/bigbang/elasticsearch-kibana:0.0.0-bb.0
+  # renovate: packageName=fluentbit
+  - registry1.dso.mil/bigbang/fluentbit:0.0.0-bb.0
+  # renovate: packageName=addons.fortify
+  - registry1.dso.mil/bigbang/fortify-ssc:0.0.0-bb.0
+  # renovate: packageName=gatekeeper
+  - registry1.dso.mil/bigbang/gatekeeper:0.0.0-bb.0
+  # renovate: packageName=addons.gitlab
+  - registry1.dso.mil/bigbang/gitlab:0.0.0-bb.0
+  # renovate: packageName=addons.gitlabRunner
+  - registry1.dso.mil/bigbang/gitlab-runner:0.0.0-bb.0
+  # renovate: packageName=grafana
+  - registry1.dso.mil/bigbang/grafana:0.0.0-bb.0
+  # renovate: packageName=addons.harbor
+  - registry1.dso.mil/bigbang/harbor:0.0.0-bb.0
+  # renovate: packageName=istioCRDs
+  - registry1.dso.mil/bigbang/istio-crds:0.0.0-bb.0
+  # renovate: packageName=istiod
+  - registry1.dso.mil/bigbang/istiod:0.0.0-bb.0
+  # renovate: packageName=addons.keycloak
+  - registry1.dso.mil/bigbang/keycloak:0.0.0-bb.0
+  # renovate: packageName=kiali
+  - registry1.dso.mil/bigbang/kiali:0.0.0-bb.0
+  # renovate: packageName=kyverno
+  - registry1.dso.mil/bigbang/kyverno:0.0.0-bb.0
+  # renovate: packageName=kyvernoPolicies
+  - registry1.dso.mil/bigbang/kyverno-policies:0.0.0-bb.0
+  # renovate: packageName=kyvernoReporter
+  - registry1.dso.mil/bigbang/kyverno-reporter:0.0.0-bb.0
+  # renovate: packageName=loki
+  - registry1.dso.mil/bigbang/loki:0.0.0-bb.0
+  # renovate: packageName=addons.mattermost
+  - registry1.dso.mil/bigbang/mattermost:0.0.0-bb.0
+  # renovate: packageName=addons.mattermostOperator
+  - registry1.dso.mil/bigbang/mattermost-operator:0.0.0-bb.0
+  # renovate: packageName=addons.metricsServer
+  - registry1.dso.mil/bigbang/metrics-server:0.0.0-bb.0
+  # renovate: packageName=addons.minio
+  - registry1.dso.mil/bigbang/minio-instance:0.0.0-bb.0
+  # renovate: packageName=addons.minioOperator
+  - registry1.dso.mil/bigbang/minio-operator:0.0.0-bb.0
+  # renovate: packageName=monitoring
+  - registry1.dso.mil/bigbang/monitoring:0.0.0-bb.0
+  # renovate: packageName=neuvector
+  - registry1.dso.mil/bigbang/neuvector:0.0.0-bb.0
+  # renovate: packageName=addons.nexusRepositoryManager
+  - registry1.dso.mil/bigbang/nexus-repository-manager:0.0.0-bb.0
+  # renovate: packageName=istioGateway
+  - registry1.dso.mil/bigbang/gateway:0.0.0-bb.0
+  # renovate: packageName=promtail
+  - registry1.dso.mil/bigbang/promtail:0.0.0-bb.0
+  # renovate: packageName=addons.sonarqube
+  - registry1.dso.mil/bigbang/sonarqube:0.0.0-bb.0
+  # renovate: packageName=tempo
+  - registry1.dso.mil/bigbang/tempo:0.0.0-bb.0
+  # renovate: packageName=addons.thanos
+  - registry1.dso.mil/bigbang/thanos:0.0.0-bb.0
+  # renovate: packageName=twistlock
+  - registry1.dso.mil/bigbang/twistlock:0.0.0-bb.0
+  # renovate: packageName=addons.vault
+  - registry1.dso.mil/bigbang/vault:0.0.0-bb.0
+  # renovate: packageName=addons.velero
+  - registry1.dso.mil/bigbang/velero:0.0.0-bb.0
 components:
   # Pulls in the zarf-injector
   - name: zarf-injector
