@@ -70,8 +70,8 @@
       matchStrings: [
         "(?m:defaultRegistryUrlTemplate.+?(?<currentValue>(?:[0-9]+\\.?){3}))"
       ],
-      datasourceTemplate: "gitlab-releases",
-      depNameTemplate: "https://repo1.dso.mil/big-bang/bigbang"
+      datasourceTemplate: "git-tags",
+      depNameTemplate: "https://repo1.dso.mil/big-bang/bigbang.git"
     },
     {
       customType: "regex",
