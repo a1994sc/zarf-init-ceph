@@ -76,7 +76,7 @@
       "defaultRegistryUrlTemplate": "https://repo1.dso.mil/big-bang/bigbang/-/raw/3.0.0/chart/values.yaml",
       "format": "yaml",
       "transformTemplates": [
-        "($pkg := {{packageName}}; $url := $replace($pkg.git.repo, /.git/, ''); $vrs := $pkg.helmRepo.tag; {\"releases\": [{\"version\": $vrs, \"sourceUrl\": $url}]})"
+        "($pkg := {{packageName}}; $url := $replace($pkg.git.repo, /.git/, ''); $vrs := $pkg.helmRepo.tag; {\"releases\": [{\"version\": $vrs, \"sourceUrl\": $url, \"changelogUrl\": $join([$url, \"/-/releases/\", $vrs])}]})"
       ]
     }
   }
