@@ -13,7 +13,7 @@ x-test:
   # renovate: packageName=istiod
   - registry1.dso.mil/bigbang/istiod:1.25.1-bb.0
   # renovate: packageName=addons.argocd
-  - registry1.dso.mil/bigbang/argocd:7.0.0-bb.0
+  - registry1.dso.mil/bigbang/argocd:7.9.0-bb.0
 components:
   # Pulls in the zarf-injector
   - name: zarf-injector
