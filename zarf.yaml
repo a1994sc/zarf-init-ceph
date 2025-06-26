@@ -13,7 +13,7 @@ x-test:
   # renovate: packageName=addons.anchoreEnterprise
   - registry1.dso.mil/bigbang/anchore:3.7.0-bb.0
   # renovate: packageName=addons.argocd
-  - registry1.dso.mil/bigbang/argocd:7.9.0-bb.0
+  - registry1.dso.mil/bigbang/argocd:8.0.10-bb.0
   # renovate: packageName=addons.authservice
   - registry1.dso.mil/bigbang/authservice:1.0.4-bb.3
   # renovate: packageName=bbctl
@@ -29,21 +29,21 @@ x-test:
   # renovate: packageName=gatekeeper
   - registry1.dso.mil/bigbang/gatekeeper:3.19.1-bb.0
   # renovate: packageName=addons.gitlab
-  - registry1.dso.mil/bigbang/gitlab:9.0.1-bb.1
+  - registry1.dso.mil/bigbang/gitlab:9.0.2-bb.0
   # renovate: packageName=addons.gitlabRunner
-  - registry1.dso.mil/bigbang/gitlab-runner:0.75.1-bb.2
+  - registry1.dso.mil/bigbang/gitlab-runner:0.77.2-bb.0
   # renovate: packageName=grafana
   - registry1.dso.mil/bigbang/grafana:9.2.2-bb.0
   # renovate: packageName=addons.harbor
   - registry1.dso.mil/bigbang/harbor:1.17.1-bb.0
   # renovate: packageName=istioCRDs
-  - registry1.dso.mil/bigbang/istio-crds:1.25.3-bb.0
+  - registry1.dso.mil/bigbang/istio-crds:1.26.1-bb.0
   # renovate: packageName=istiod
-  - registry1.dso.mil/bigbang/istiod:1.25.3-bb.3
+  - registry1.dso.mil/bigbang/istiod:1.26.1-bb.0
   # renovate: packageName=addons.keycloak
   - registry1.dso.mil/bigbang/keycloak:7.0.1-bb.0
   # renovate: packageName=kiali
-  - registry1.dso.mil/bigbang/kiali:2.9.0-bb.2
+  - registry1.dso.mil/bigbang/kiali:2.10.0-bb.0
   # renovate: packageName=kyverno
   - registry1.dso.mil/bigbang/kyverno:3.3.6-bb.3
   # renovate: packageName=kyvernoPolicies
@@ -53,7 +53,7 @@ x-test:
   # renovate: packageName=loki
   - registry1.dso.mil/bigbang/loki:6.30.1-bb.1
   # renovate: packageName=addons.mattermost
-  - registry1.dso.mil/bigbang/mattermost:10.8.1-bb.1
+  - registry1.dso.mil/bigbang/mattermost:10.9.1-bb.1
   # renovate: packageName=addons.mattermostOperator
   - registry1.dso.mil/bigbang/mattermost-operator:1.23.0-bb.0
   # renovate: packageName=addons.metricsServer
@@ -63,13 +63,13 @@ x-test:
   # renovate: packageName=addons.minioOperator
   - registry1.dso.mil/bigbang/minio-operator:7.1.1-bb.0
   # renovate: packageName=monitoring
-  - registry1.dso.mil/bigbang/monitoring:72.2.0-bb.3
+  - registry1.dso.mil/bigbang/monitoring:73.2.0-bb.0
   # renovate: packageName=neuvector
   - registry1.dso.mil/bigbang/neuvector:2.8.6-bb.0
   # renovate: packageName=addons.nexusRepositoryManager
   - registry1.dso.mil/bigbang/nexus-repository-manager:79.0.0-bb.2
   # renovate: packageName=istioGateway
-  - registry1.dso.mil/bigbang/gateway:1.25.3-bb.4
+  - registry1.dso.mil/bigbang/gateway:1.26.1-bb.1
   # renovate: packageName=promtail
   - registry1.dso.mil/bigbang/promtail:6.16.6-bb.4
   # renovate: packageName=addons.sonarqube
@@ -79,11 +79,11 @@ x-test:
   # renovate: packageName=addons.thanos
   - registry1.dso.mil/bigbang/thanos:16.0.2-bb.0
   # renovate: packageName=twistlock
-  - registry1.dso.mil/bigbang/twistlock:0.20.1-bb.2
+  - registry1.dso.mil/bigbang/twistlock:0.21.0-bb.0
   # renovate: packageName=addons.vault
   - registry1.dso.mil/bigbang/vault:0.30.0-bb.4
   # renovate: packageName=addons.velero
-  - registry1.dso.mil/bigbang/velero:8.7.1-bb.1
+  - registry1.dso.mil/bigbang/velero:10.0.1-bb.0
 components:
   # Pulls in the zarf-injector
   - name: zarf-injector
