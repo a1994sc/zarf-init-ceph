@@ -1,6 +1,6 @@
 # ignore zarf artifacts
-zarf-*.tar
-zarf-*.tar.zst
+*.tar
+*.tar.zst
 zarf-sbom
 /zarf-artifacts
 decompress
